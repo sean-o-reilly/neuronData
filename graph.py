@@ -11,7 +11,7 @@ def classify_region(name):
     elif "Hip" in name or name.startswith("CA"): return "hippocampus"
     else: return "other"
 
-G = nx.read_graphml("rhesus_brain_1.graphml")
+G = nx.read_graphml("data/rhesus_brain_1.graphml")
 
 # for loops to fill up these arrays with different sized node weights, write names to a file
 
@@ -50,6 +50,6 @@ pos = nx.spring_layout(G)
 # nx.draw(G, pos, with_labels=False, node_color="skyblue", edge_color="gray", node_size=node_sizes, width=edge_widths)
 nx.draw_networkx_nodes(G, pos, node_color=colors, node_size=550)
 nx.draw_networkx_labels(G, pos)
-nx.draw_networkx_edges(G, pos, arrows=False, edge_color="darkgray", width=0.8)
+nx.draw_networkx_edges(G, pos, arrows=False, edge_color="paleturquoise", width=0.8)
 plt.title("Rhesus Brain Nerve Edges", fontsize=70)
 plt.savefig("rhesus_plt.png")
