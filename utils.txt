@@ -1,0 +1,32 @@
+# Used to setup virtual environment inside WSL 
+
+sudo apt update
+sudo apt install python3-venv -y
+
+python3 -m venv myenv
+source myenv/bin/activate
+pip install networkx matplotlib lxml
+
+WSL doesn't open gui applications
+pip install notebook
+jupyter notebook
+
+# Data
+
+Mouse Brain 1 - 213 Nodes, 21807 Edges
+
+Rhesus Brain 1 - 242 Nodes, 4090 Edges
+
+No weights included in the data? Decided to print the name of each node 
+into a text file and throw it ChatGPT to group the terms together since I'm not a neuroscientist
+
+Cortical Areas = V1, V2, V3, MT, FEF, TE, 46, 9/46d, 8A
+Subcortical Areas = CA1, DG, ENT, Hip, PrS
+Somatosensory/Motor = M1, S1, S2, SMAr, F5, F4, MIP
+Temporal/Frontal Lobes = TPO, STG, PGm, IPL, OFA, TF, TH
+Connectivity Zones = LIP, VIP, PECg, PIT, PGop
+Unknown? = TPPro, OAa, ProK, FD#1, PEC#1, belt_s
+
+Drosophilia Medulia - 1781 Nodes, 33641 Edges
+
+C.elengas (worm) - 272 Nodes, 4451 Edges
